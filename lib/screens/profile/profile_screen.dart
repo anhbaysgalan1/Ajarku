@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
-import 'package:quick_learn/models/hive/user.dart';
+import 'package:quick_learn/models/hive/user/user.dart';
 
 class ProfileScreen extends StatelessWidget {
   @override

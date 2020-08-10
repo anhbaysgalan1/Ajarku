@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:quick_learn/bloc/bottom_navbar/bottom_navbar_bloc.dart';
-import 'package:quick_learn/models/hive/user.dart';
-import 'package:quick_learn/screens/home/homepage_screen.dart';
+import 'package:quick_learn/models/hive/user/user.dart';
 import 'package:quick_learn/widgets/bottom_nav_bar_primary.dart';
+import 'package:quick_learn/widgets/upload_course.dart';
 
 main() async {
 //  Hive
@@ -80,6 +78,7 @@ class QuickLearnApp extends HookWidget {
                       height: 200,
                       child: Text('>>>>'),
                     ),
+                    UploadCourse(),
                     Container(
                       height: 200,
                       child: Text('>>>>'),

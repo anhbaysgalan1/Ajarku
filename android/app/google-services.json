@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "382773275457",
+    "firebase_url": "https://quicklearn-01.firebaseio.com",
+    "project_id": "quicklearn-01",
+    "storage_bucket": "quicklearn-01.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382773275457:android:7929462b019c547578cfc0",
+        "android_client_info": {
+          "package_name": "com.quicklearn.quick_learn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "382773275457-coqgjqb4ivvsrqqhb8resdn3uh635k9q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.quicklearn.quick_learn",
+            "certificate_hash": "a6a3660f9297787189a4c5fc0d56098f05984392"
+          }
+        },
+        {
+          "client_id": "382773275457-grottidt991uujoo82j0vomip7qqefpd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTrj7e8EThUqR3lksJ-xywWkKHD4iUBYE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "382773275457-grottidt991uujoo82j0vomip7qqefpd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

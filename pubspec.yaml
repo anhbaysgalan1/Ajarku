@@ -18,10 +18,15 @@ dependencies:
 #  google_sign_in: ^4.5.1
   form_field_validator: ^1.0.1
   equatable: ^1.2.3
-  hive: ^1.4.2
+  hive: ^1.4.3
   hive_flutter: ^0.3.1
   flutter_bloc: ^6.0.1
   sized_context: ^0.2.1+1
+  video_player: ^0.10.11+2
+  carousel_slider: ^2.2.1
+  firebase_storage: ^3.1.6
+  path_provider: ^1.6.11
+  firebase_core: ^0.4.5
 
 
 dev_dependencies:

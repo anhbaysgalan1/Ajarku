@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hive/hive.dart';
-import 'package:quick_learn/models/hive/user.dart';
+import 'package:quick_learn/models/hive/user/user.dart';
 import '../profile/profile_screen.dart';
 
 class HomepageScreen extends HookWidget {
