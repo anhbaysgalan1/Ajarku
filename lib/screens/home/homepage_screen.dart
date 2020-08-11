@@ -10,28 +10,6 @@ class HomepageScreen extends HookWidget {
     final tabController = useTabController(initialLength: 3);
     return Column(
       children: [
-//        Container(
-//          constraints: BoxConstraints(maxHeight: 150),
-//          color: Colors.blueGrey,
-//          child: TabBar(
-//            controller: tabController,
-//            labelColor: Colors.white,
-//            indicatorColor: Colors.black26,
-//            indicatorPadding: EdgeInsets.only(left: 10),
-//            indicatorWeight: 5,
-//            tabs: [
-//              Tab(
-//                child: Text('Home'),
-//              ),
-//              Tab(
-//                child: Text('My Courses'),
-//              ),
-//              Tab(
-//                child: Text('Social'),
-//              ),
-//            ],
-//          ),
-//        ),
         Expanded(
           child: TabBarView(
             controller: tabController,
