@@ -1,68 +1,82 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hive/hive.dart';
 import 'package:quick_learn/models/hive/user/user.dart';
+import 'package:quick_learn/widgets/upload_course.dart';
 import '../profile/profile_screen.dart';
 
 class HomepageScreen extends HookWidget {
   @override
   Widget build(BuildContext context) {
-    final tabController = useTabController(initialLength: 3);
-    return Column(
-      children: [
-//        Container(
-//          constraints: BoxConstraints(maxHeight: 150),
-//          color: Colors.blueGrey,
-//          child: TabBar(
-//            controller: tabController,
-//            labelColor: Colors.white,
-//            indicatorColor: Colors.black26,
-//            indicatorPadding: EdgeInsets.only(left: 10),
-//            indicatorWeight: 5,
-//            tabs: [
-//              Tab(
-//                child: Text('Home'),
-//              ),
-//              Tab(
-//                child: Text('My Courses'),
-//              ),
-//              Tab(
-//                child: Text('Social'),
-//              ),
-//            ],
-//          ),
-//        ),
-        Expanded(
-          child: TabBarView(
-            controller: tabController,
-            children: [
-              Container(),
-              Container(),
-              Container(),
-            ],
-          ),
-        ),
-        IconButton(
-          padding: EdgeInsets.all(20),
-          icon: Icon(Icons.person),
-          onPressed: () {
-            Hive.box<UserProfile>('userProfile').put(
-              'myProfile',
-              UserProfile(
-                username: 'rifky',
-                email: 'rifkyadp@gmail.com',
-                fullname: 'rifky adni',
-                points: '20',
+          
+    final singleChildScrollController = useScrollController();
+
+    final tickerProvider = useSingleTickerProvider();
+    final tabController =
+        useTabController(initialLength: 3, vsync: tickerProvider);
+    return TabBarView(
+          controller: tabController,
+          children: [
+            SingleChildScrollView(
+              controller: singleChildScrollController,
+              child: Container(
+                width: 300,
+                color: Colors.blue,
+                child: Column(
+                  children: [
+                    Text('1'),
+                    Container(
+                      height: 200,
+                      child: Text('>>>>'),
+                    ),
+                    UploadCourse(),
+                    Container(
+                      height: 200,
+                      child: Text('>>>>'),
+                    ),
+                    Container(
+                      height: 200,
+                      child: Text('>>>>'),
+                    ),
+                    Container(
+                      height: 200,
+                      child: Text('>>>>'),
+                    ),
+                    Container(
+                      height: 200,
+                      child: Text('>>>>'),
+                    ),
+                    Container(
+                      height: 200,
+                      child: Text('>>>>'),
+                    ),
+                    Container(
+                      height: 200,
+                      child: Text('>>>>'),
+                    ),
+                    Container(
+                      height: 200,
+                      child: Text('>>>>'),
+                    ),
+                    Container(
+                      height: 200,
+                      child: Text('>>>>'),
+                    ),
+                  ],
+                ),
               ),
-            );
-            Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => ProfileScreen(),
-              ),
-            );
-          },
-        ),
-      ],
-    );
-  }
+            ),
+            Container(
+              width: 300,
+              color: Colors.green,
+              child: Text('2'),
+            ),
+            Container(
+              width: 300,
+              color: Colors.amber,
+              child: Text('3'),
+            ),
+          ],
+        );}
 }

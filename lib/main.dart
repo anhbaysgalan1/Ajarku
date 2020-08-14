@@ -1,9 +1,12 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:quick_learn/models/hive/user/user.dart';
+import 'package:quick_learn/screens/login_screen.dart';
 import 'package:quick_learn/widgets/bottom_nav_bar_primary.dart';
 import 'package:quick_learn/widgets/upload_course.dart';
 
@@ -14,6 +17,7 @@ main() async {
   await Hive.openBox<UserProfile>('userProfile');
   runApp(QuickLearnApp());
 }
+
 
 class QuickLearnApp extends HookWidget {
   @override
@@ -60,73 +64,7 @@ class QuickLearnApp extends HookWidget {
             child: Icon(Icons.add),
           ),
         ),
-        body: TabBarView(
-          controller: tabController,
-          children: [
-            SingleChildScrollView(
-              controller: singleChildScrollController,
-              child: Container(
-                width: 300,
-                color: Colors.blue,
-                child: Column(
-                  children: [
-                    Text('1'),
-                    showFloating.value
-                        ? Text('ditampilkan')
-                        : Text('disembunyikan'),
-                    Container(
-                      height: 200,
-                      child: Text('>>>>'),
-                    ),
-                    UploadCourse(),
-                    Container(
-                      height: 200,
-                      child: Text('>>>>'),
-                    ),
-                    Container(
-                      height: 200,
-                      child: Text('>>>>'),
-                    ),
-                    Container(
-                      height: 200,
-                      child: Text('>>>>'),
-                    ),
-                    Container(
-                      height: 200,
-                      child: Text('>>>>'),
-                    ),
-                    Container(
-                      height: 200,
-                      child: Text('>>>>'),
-                    ),
-                    Container(
-                      height: 200,
-                      child: Text('>>>>'),
-                    ),
-                    Container(
-                      height: 200,
-                      child: Text('>>>>'),
-                    ),
-                    Container(
-                      height: 200,
-                      child: Text('>>>>'),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Container(
-              width: 300,
-              color: Colors.green,
-              child: Text('2'),
-            ),
-            Container(
-              width: 300,
-              color: Colors.amber,
-              child: Text('3'),
-            ),
-          ],
-        ),
+        body: LoginScreen()
       ),
     );
   }
