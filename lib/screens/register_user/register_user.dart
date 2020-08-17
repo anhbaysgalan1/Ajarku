@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quick_learn/helpers/firebase_helper.dart';
+import 'package:quick_learn/utils/firebase_helper.dart';
 
 class RegisterUserScreen extends StatelessWidget {
   final formKey = GlobalKey<FormState>();
@@ -27,9 +27,10 @@ class RegisterUserScreen extends StatelessWidget {
                   formKey.currentState.save();
                   print(user);
                   print(password);
-                  final newUser =
-                      await FirebaseHelper().createNewAccount(user, password);
-                  print(newUser.toString());
+                  final newUser = await FirebaseHelper().createNewAccount(
+                    user,
+                    password,
+                  );
                 },
               ),
             ],

@@ -7,22 +7,27 @@ abstract class AuthEvent extends Equatable {
   List<Object> get props => [];
 }
 
-class LogInEvent extends AuthState {
+class AuthInit extends AuthEvent {}
+
+class LoginEmailEvent extends AuthEvent {
   final LoginInputModel login;
 
-  LogInEvent(this.login);
+  LoginEmailEvent({this.login});
+
   @override
   List<Object> get props => [login];
 }
 
-class LogOutEvent extends AuthState {}
+class LoginGoogleEvent extends AuthEvent {}
 
-class RegisterEvent extends AuthState {
+class LogOutEvent extends AuthEvent {}
+
+class RegisterEvent extends AuthEvent {
   final registerInput;
 
-  RegisterEvent(this.registerInput);
+  RegisterEvent({this.registerInput});
   @override
   List<Object> get props => [registerInput];
 }
 
-class Virgin extends AuthState {}
+class FirstTime extends AuthEvent {}
